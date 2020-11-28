@@ -79,12 +79,12 @@ for(var i=0; i< questionArray.length; i++){
 }
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 console.log(chalk.bold.white.bgYellow("Your Total score is: ", score));
+var lowFlag = checkHighscore(score);
+ if(lowFlag === ""){
+  console.log("Congratulations !! You have scored the highest points. Please send me the screenshot of points so i can update it in my system") 
+ } 
 updateScore(userName, score);
-if(score == 10) {
-  console.log(chalk.italic.white.bold.bgBlue("Congratulations !! You have scored the highest points. Please send me the screenshot of points so i can update it in my system"));
-}else{
- display(); 
-}
+display(); 
 console.log(chalk.bold.underline.white.bgBlue("~~~~~~ Thank You " +userName+ "!! ~~~~~~~~"));
 
 
@@ -119,4 +119,16 @@ function display(){
   }
 }
 
+function checkHighscore(score){
+  var lowFlag = "";
+  for(var i=0; i<scoreArray.length; i++){
+    if(scoreArray[i].score < score){
+      
+    }else{
+      lowFlag = "X";
+      break;
+    }
+  }
+  return lowFlag;
+}
 
