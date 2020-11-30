@@ -1,6 +1,8 @@
 # friendsQuiz
 Friends Quiz
 
+#Game link: [F.R.I.E.N.D.S.](https://repl.it/@lalitmendha/friendsQuiz?embed=1&output=1#index.js)
+
 This application is built using Node.js
 
 #How this Application works:
